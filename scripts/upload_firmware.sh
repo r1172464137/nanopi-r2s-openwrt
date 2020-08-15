@@ -39,9 +39,9 @@ curl -sL "https://git.io/file-transfer" | sh
 [ ! -f "./transfer" ] && exit 0
 
 transfer_upload "cow" "ext4" > "ext4-transfer_log"
-transfer_upload "wet" "ext4" > "ext4-transfer_log"
+transfer_upload "wet" "ext4" >> "ext4-transfer_log"
 
-transfer_upload "cow" "squashfs" >> "squashfs-transfer_log"
+transfer_upload "cow" "squashfs" > "squashfs-transfer_log"
 transfer_upload "wet" "squashfs" >> "squashfs-transfer_log"
 
 ext4_download_link="$(resolve_download_link "get" "ext4-transfer_log")"

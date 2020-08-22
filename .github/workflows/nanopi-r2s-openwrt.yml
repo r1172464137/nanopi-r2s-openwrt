@@ -1,7 +1,7 @@
 name: NanoPi R2S OpenWrt
 
 on: repository_dispatch
-    push:
+   push:
      schedule:
        - cron: 0 8 * * 5
      watch:
